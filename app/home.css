@@ -1,0 +1,355 @@
+.home-page .reveal-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+
+.home-page .reveal-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.home-page .hero-content h1 {
+  font-size: clamp(54px, 6vw, 88px);
+  line-height: 0.96;
+}
+
+.home-page .hero-description {
+  font-size: 17.5px;
+  line-height: 1.7;
+}
+
+.home-page .hero-primary,
+.home-page .hero-secondary {
+  min-height: 54px;
+  padding: 0 22px;
+  font-size: 14.5px;
+}
+
+.home-page .hero-proof strong {
+  font-size: 10.5px;
+}
+
+.home-page .hero-proof span {
+  font-size: 11.5px;
+}
+
+.home-page .hero-eyebrow,
+.home-page .section-kicker {
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+}
+
+.home-page .section-heading h2,
+.home-page .intro-main h2,
+.home-page .projects-heading h2,
+.home-page .why-copy h2,
+.home-page .process-heading h2 {
+  font-size: clamp(38px, 4.2vw, 60px);
+  line-height: 1.02;
+}
+
+.home-page .intro-main p,
+.home-page .why-copy p,
+.home-page .section-heading p,
+.home-page .process-heading p {
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.home-page .technology-layout h2 {
+  font-size: clamp(32px, 3.5vw, 48px);
+}
+
+.home-page .intro-label {
+  font-size: 10.5px;
+}
+
+.home-page .section-link,
+.home-page .projects-link,
+.home-page .process-link,
+.home-page .services-action a {
+  font-size: 14px;
+}
+
+.home-page .service-number {
+  font-size: 10.5px;
+}
+
+.home-page .service-card h3 {
+  font-size: 20px;
+}
+
+.home-page .service-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.home-page .service-footer {
+  font-size: 10.5px;
+}
+
+.home-page .technology-cloud span {
+  padding: 11px 15px;
+  font-size: 12px;
+}
+
+.home-page .project-index {
+  font-size: 11.5px;
+}
+
+.home-page .project-visual span {
+  font-size: 9.5px;
+}
+
+.home-page .project-details h3 {
+  font-size: 27px;
+}
+
+.home-page .project-details p {
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.home-page .project-tech span {
+  padding: 6px 9px;
+  font-size: 9.5px;
+}
+
+.home-page .reason-top span {
+  font-size: 10.5px;
+}
+
+.home-page .reason-card h3 {
+  font-size: 17.5px;
+}
+
+.home-page .reason-card p {
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.home-page .process-top span {
+  font-size: 10.5px;
+}
+
+.home-page .process-item h3 {
+  font-size: 18.5px;
+}
+
+.home-page .process-item p {
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.home-page .cta-content h2 {
+  font-size: clamp(52px, 6.5vw, 84px);
+  line-height: 0.98;
+}
+
+.home-page .cta-content p {
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.home-page .cta-button {
+  min-height: 54px;
+  padding: 0 24px;
+  font-size: 14.5px;
+}
+
+.home-page .hero-image-label span {
+  font-size: 9.5px;
+}
+
+.home-page .hero-image-label strong {
+  font-size: 12.5px;
+}
+
+.home-page .floating-panel span {
+  font-size: 9.5px;
+}
+
+.home-page .floating-panel strong {
+  font-size: 12.5px;
+}
+
+.home-page .hero-bottom-line {
+  font-size: 9.5px;
+}
+
+.home-page .intro-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 42px;
+  padding-top: 34px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.home-page .value-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.012)
+  );
+  transition:
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.home-page .value-card:hover {
+  border-color: rgba(22, 132, 255, 0.45);
+  background: linear-gradient(
+    145deg,
+    rgba(22, 132, 255, 0.09),
+    rgba(255, 255, 255, 0.018)
+  );
+  box-shadow: 0 22px 55px rgba(0, 71, 180, 0.14);
+}
+
+.home-page .value-number {
+  color: #1684ff;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  padding-top: 5px;
+}
+
+.home-page .value-content h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.home-page .value-content p {
+  margin: 0;
+  color: #8292a9;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.home-page .value-card > svg {
+  margin-left: auto;
+  color: #4d6078;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home-page .value-card:hover > svg {
+  color: #1684ff;
+  transform: translate(3px, -3px);
+}
+
+.home-page .service-footer-link {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: inherit;
+  border-radius: 50%;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.home-page .service-card:hover .service-footer-link {
+  color: #ffffff;
+  background: rgba(22, 132, 255, 0.18);
+  transform: translateX(3px);
+}
+
+.home-page a.project-arrow {
+  text-decoration: none;
+}
+
+.home-page .cta-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(circle at center, black, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 1051px) {
+  .home-page .process-track {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-page .hero-content h1 {
+    font-size: clamp(46px, 8vw, 72px);
+  }
+
+  .home-page .intro-values {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+    padding-top: 26px;
+  }
+
+  .home-page .value-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-page .hero-content h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .home-page .hero-description {
+    font-size: 15.5px;
+  }
+
+  .home-page .section-heading h2,
+  .home-page .intro-main h2,
+  .home-page .projects-heading h2,
+  .home-page .why-copy h2,
+  .home-page .process-heading h2 {
+    font-size: clamp(32px, 9vw, 46px);
+  }
+
+  .home-page .cta-content h2 {
+    font-size: clamp(42px, 12vw, 60px);
+  }
+
+  .home-page .project-details h3 {
+    font-size: 22px;
+  }
+
+  .home-page .intro-values {
+    margin-top: 26px;
+    padding-top: 22px;
+  }
+
+  .home-page .value-content h3 {
+    font-size: 16.5px;
+  }
+
+  .home-page .value-content p {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .reveal-line {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
