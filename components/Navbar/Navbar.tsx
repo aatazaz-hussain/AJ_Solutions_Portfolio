@@ -5,12 +5,10 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import "./Navbar.css";
+
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Process", href: "/process" },
   { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
 ];
@@ -28,7 +26,7 @@ export default function Navbar() {
           <img
             src="/logo/aj-solutions-logo.png"
             alt="AJ Solutions - AI Journey"
-          />{" "}
+          />
         </Link>
 
         <nav className="desktop-nav" aria-label="Main navigation">

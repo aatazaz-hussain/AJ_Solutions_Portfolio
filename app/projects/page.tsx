@@ -58,6 +58,7 @@ const projects = [
   {
     number: "01",
     slug: "see-and-hire",
+    image: "/projects/see-and-hire.png",
     title: "See and Hire",
     category: "AI PLATFORM",
     tags: ["ai-ml", "software"],
@@ -82,6 +83,7 @@ const projects = [
   {
     number: "02",
     slug: "nutra-ai",
+    image: "/projects/nutra-ai.png",
     title: "Nutra AI",
     category: "GENERATIVE AI",
     tags: ["gen-ai", "ai-ml"],
@@ -106,6 +108,7 @@ const projects = [
   {
     number: "03",
     slug: "tableop",
+    image: "/projects/tableop.png",
     title: "Tableop",
     category: "AI / SOFTWARE",
     tags: ["software", "ai-ml"],
@@ -130,6 +133,7 @@ const projects = [
   {
     number: "04",
     slug: "dental-dynamo",
+    image: "/projects/dental-dynamo.png",
     title: "Dental Dynamo",
     category: "COMPUTER VISION",
     tags: ["cv", "ai-ml"],
@@ -154,6 +158,7 @@ const projects = [
   {
     number: "05",
     slug: "mental-health-in-tech",
+    image: "/projects/mental-health.png",
     title: "Mental Health in Tech",
     category: "DATA & ANALYTICS",
     tags: ["data"],
@@ -178,6 +183,7 @@ const projects = [
   {
     number: "06",
     slug: "job-salaries-management",
+    image: "/projects/job-salaries.png",
     title: "Job Salaries Management",
     category: "DATA ANALYTICS",
     tags: ["data"],
@@ -202,6 +208,7 @@ const projects = [
   {
     number: "07",
     slug: "house-price-predictions",
+    image: "/projects/house-price.png",
     title: "House Price Predictions",
     category: "MACHINE LEARNING",
     tags: ["ai-ml", "data"],
@@ -226,6 +233,7 @@ const projects = [
   {
     number: "08",
     slug: "story-generator",
+    image: "/projects/story-generator.png",
     title: "Story Generator",
     category: "GENERATIVE AI",
     tags: ["gen-ai"],
@@ -544,17 +552,23 @@ export default function Projects() {
                         aria-label={`Open ${project.title}`}
                       >
                         <div className="project-card-visual">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            sizes="(max-width: 760px) 100vw, 50vw"
+                            className="project-card-image"
+                          />
+
+                          <div className="project-card-overlay" />
+
                           <span className="project-card-index">
                             {project.number}
                           </span>
 
-                          <div className="project-card-symbol">
-                            <Icon size={40} strokeWidth={1.3} />
+                          <div className="project-card-icon-tag">
+                            <Icon size={18} strokeWidth={1.8} />
                           </div>
-
-                          <div className="project-card-ring ring-one" />
-                          <div className="project-card-ring ring-two" />
-                          <div className="project-card-glow" />
 
                           <div className="project-card-corner tl" />
                           <div className="project-card-corner tr" />
@@ -655,8 +669,8 @@ export default function Projects() {
                   <ArrowUpRight size={18} strokeWidth={2} />
                 </Link>
 
-                <Link href="/services" className="cta-link">
-                  <span>Explore Our Services</span>
+                <Link href="/team" className="cta-link">
+                  <span>Meet the Team</span>
                   <ArrowUpRight size={18} />
                 </Link>
               </motion.div>
