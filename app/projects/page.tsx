@@ -52,6 +52,7 @@ const filters = [
   { key: "cv", label: "COMPUTER VISION" },
   { key: "data", label: "DATA & ANALYTICS" },
   { key: "software", label: "SOFTWARE" },
+    { key: "social", label: "SOCIAL MEDIA" },
 ];
 
 const projects = [
@@ -255,6 +256,31 @@ const projects = [
     purpose:
       "Demonstrates creative application of large language models.",
   },
+    {
+    number: "09",
+    slug: "social-media-management",
+    image: "/projects/social-media.png",
+    title: "Social Media Management",
+    category: "SOCIAL MEDIA",
+    tags: ["social"],
+    icon: TrendingUp,
+    shortDescription:
+      "A strategy-driven social media service helping brands grow through consistent content, meaningful engagement and data-backed analytics.",
+    problem:
+      "Brands struggle to build consistent, strategic social presence across multiple platforms without a structured approach.",
+    solution:
+      "A complete social media management service — content strategy, creation, account management and analytics — delivered by AJ Solutions.",
+    features: [
+      "Content Strategy",
+      "Content Creation",
+      "Account Management",
+      "Analytics & Reporting",
+      "Multi-Platform Optimization",
+    ],
+    tech: ["Strategy", "Content Design", "Analytics", "Community Management"],
+    purpose:
+      "Extends AJ Solutions' capabilities into brand growth and digital marketing services.",
+  },
 ];
 
 export default function Projects() {
@@ -408,7 +434,7 @@ export default function Projects() {
               >
                 <Sparkles size={17} />
                 <div>
-                  <span>EIGHT PROJECTS</span>
+                  <span>NINE PROJECTS</span>
                   <strong>Across domains</strong>
                 </div>
               </motion.div>

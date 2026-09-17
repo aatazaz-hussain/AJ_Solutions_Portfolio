@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,8 +20,13 @@ import {
   PenTool,
   Rocket,
   RefreshCw,
+  Megaphone,
+  PenLine,
+  BarChart3,
+  Calendar,
+  X,
 } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import "./home.css";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -104,6 +110,80 @@ const capabilities = [
   "Product Design",
   "UI / UX Systems",
   "Digital Strategy",
+];
+
+const socialServices = [
+  {
+    number: "01",
+    icon: Compass,
+    title: "Content Strategy",
+    text: "Structured content plans aligned with brand goals, audience needs and targeted messaging.",
+  },
+  {
+    number: "02",
+    icon: PenLine,
+    title: "Content Creation",
+    text: "Consistent visual and short-form content produced to reflect brand identity across platforms.",
+  },
+  {
+    number: "03",
+    icon: Calendar,
+    title: "Account Management",
+    text: "End-to-end posting, scheduling, engagement and daily account activity managed for the brand.",
+  },
+  {
+    number: "04",
+    icon: BarChart3,
+    title: "Analytics & Reporting",
+    text: "Performance tracking and data-driven optimization across every active social platform.",
+  },
+];
+
+const socialMetrics = [
+  { value: 120, suffix: "%", label: "Engagement Rate" },
+  { value: 80, suffix: "%", label: "Follower Growth" },
+  { value: 60, suffix: "%", label: "Reach Increase" },
+];
+
+const socialPlatformTypes = [
+  {
+    icon: Megaphone,
+    title: "Short-form Video Content",
+    text: "Engaging vertical videos designed for audience retention and platform reach.",
+  },
+  {
+    icon: Palette,
+    title: "Visual Content Feeds",
+    text: "Branded and consistent social media visuals aligned with each platform's format.",
+  },
+  {
+    icon: Users,
+    title: "Story-Based Content",
+    text: "Interactive and real-time audience engagement built around brand narratives.",
+  },
+];
+
+const socialProcess = [
+  {
+    number: "01",
+    title: "Research",
+    text: "Understanding your brand, audience and competitive landscape.",
+  },
+  {
+    number: "02",
+    title: "Planning",
+    text: "Building a clear, consistent content strategy around your objectives.",
+  },
+  {
+    number: "03",
+    title: "Execution",
+    text: "Creating and publishing content across the right platforms and formats.",
+  },
+  {
+    number: "04",
+    title: "Optimization",
+    text: "Analyzing results and refining performance based on real data.",
+  },
 ];
 
 const featuredProjects = [
@@ -191,6 +271,8 @@ const process = [
 ];
 
 export default function Home() {
+  const [socialModalOpen, setSocialModalOpen] = useState(false);
+
   return (
     <div className="home-page">
       <main>
@@ -411,7 +493,7 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div variants={fadeUp}>
-                  <Link href="/about" className="section-link">
+                  <Link href="/team" className="section-link">
                     <span>More about AJ Solutions</span>
                     <ArrowUpRight size={17} />
                   </Link>
@@ -531,7 +613,7 @@ export default function Home() {
                     <div className="service-footer">
                       <span>Explore capability</span>
                       <Link
-                        href="/services"
+                        href="/projects"
                         aria-label={service.title}
                         className="service-footer-link"
                       >
@@ -550,10 +632,136 @@ export default function Home() {
               whileInView="show"
               viewport={viewport}
             >
-              <Link href="/services">
+              <Link href="/projects">
                 <span>Explore all services</span>
                 <ArrowUpRight size={17} />
               </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="social-section">
+          <div className="social-section-grid" />
+          <div className="social-section-glow" />
+
+          <div className="section-container">
+            <motion.div
+              className="social-heading"
+              variants={staggerParent}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              <motion.div className="section-kicker" variants={fadeUp}>
+                DIGITAL SERVICES
+              </motion.div>
+              <h2>
+                <span className="reveal-mask">
+                  <motion.span
+                    className="reveal-line"
+                    variants={fadeUp}
+                    style={{ display: "block" }}
+                  >
+                    Social Media
+                  </motion.span>
+                </span>
+                <span className="reveal-mask">
+                  <motion.span
+                    className="reveal-line"
+                    variants={fadeUp}
+                    style={{ display: "block" }}
+                  >
+                    <span>Management.</span>
+                  </motion.span>
+                </span>
+              </h2>
+              <motion.p variants={fadeUp}>
+                Beyond technology, AJ Solutions helps brands grow through
+                strategic social media management — content strategy, creation,
+                account management and analytics.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="social-grid"
+              variants={staggerParentSlow}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportLow}
+            >
+              {socialServices.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <motion.article
+                    className="social-card"
+                    key={service.number}
+                    variants={fadeUp}
+                  >
+                    <div className="social-card-glow" />
+                    <span className="social-card-number">
+                      {service.number}
+                    </span>
+                    <div className="social-card-icon">
+                      <Icon size={22} strokeWidth={1.8} />
+                    </div>
+                    <h3>{service.title}</h3>
+                    <p>{service.text}</p>
+                  </motion.article>
+                );
+              })}
+            </motion.div>
+
+            <motion.div
+              className="social-metrics"
+              variants={staggerParentSlow}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              {socialMetrics.map((metric) => (
+                <motion.div
+                  className="social-metric"
+                  key={metric.label}
+                  variants={fadeUp}
+                >
+                  <div className="social-metric-value">
+                    +{metric.value}
+                    <span>{metric.suffix}</span>
+                  </div>
+                  <div className="social-metric-label">{metric.label}</div>
+                </motion.div>
+              ))}
+              <motion.div className="social-metric-info" variants={fadeUp}>
+                <div className="social-metric-info-row">
+                  <span>3</span>
+                  <strong>Campaigns Managed</strong>
+                </div>
+                <div className="social-metric-info-row">
+                  <span>6</span>
+                  <strong>Months Growth</strong>
+                </div>
+                <div className="social-metric-info-row">
+                  <span>∞</span>
+                  <strong>Multi-Platform Optimization</strong>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              className="social-actions"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              <button
+                type="button"
+                className="social-cta"
+                onClick={() => setSocialModalOpen(true)}
+              >
+                <span>Explore Social Services</span>
+                <ArrowUpRight size={17} strokeWidth={2} />
+              </button>
             </motion.div>
           </div>
         </section>
@@ -748,7 +956,7 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div variants={fadeUp}>
-                  <Link href="/about" className="section-link">
+                  <Link href="/team" className="section-link">
                     <span>How we think</span>
                     <ArrowUpRight size={17} />
                   </Link>
@@ -863,7 +1071,7 @@ export default function Home() {
               whileInView="show"
               viewport={viewport}
             >
-              <Link href="/process" className="process-link">
+              <Link href="/projects" className="process-link">
                 <span>See our full process</span>
                 <ArrowUpRight size={17} />
               </Link>
@@ -928,6 +1136,151 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <AnimatePresence>
+        {socialModalOpen && (
+          <motion.div
+            className="social-modal-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setSocialModalOpen(false)}
+          >
+            <motion.div
+              className="social-modal"
+              initial={{ opacity: 0, scale: 0.94, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 10 }}
+              transition={{ duration: 0.4, ease }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="social-modal-close"
+                onClick={() => setSocialModalOpen(false)}
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="social-modal-hero">
+                <div className="social-modal-hero-glow" />
+                <span className="social-modal-eyebrow">
+                  AJ SOLUTIONS · DIGITAL SERVICES
+                </span>
+                <h2>Social Media Management</h2>
+                <p>
+                  A strategy-driven social media service helping brands grow
+                  through content, engagement and analytics. Delivered by AJ
+                  Solutions as part of our end-to-end digital capability.
+                </p>
+              </div>
+
+              <div className="social-modal-body">
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">WHAT WE DO</span>
+                  <div className="social-modal-services">
+                    {socialServices.map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <div className="social-modal-service" key={s.number}>
+                          <div className="social-modal-service-icon">
+                            <Icon size={20} strokeWidth={1.8} />
+                          </div>
+                          <h3>{s.title}</h3>
+                          <p>{s.text}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">OUR APPROACH</span>
+                  <h3 className="social-modal-statement">
+                    Strategy first, content second.
+                  </h3>
+                  <p>
+                    Every piece of content we produce reflects the brand&apos;s
+                    essence and meets specific marketing objectives. We
+                    understand the brand, audience and goals — then create
+                    aligned content that drives cohesive communication and
+                    meaningful engagement.
+                  </p>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">KEY METRICS</span>
+                  <div className="social-modal-metrics">
+                    {socialMetrics.map((metric) => (
+                      <div className="social-modal-metric" key={metric.label}>
+                        <div className="social-modal-metric-value">
+                          +{metric.value}
+                          <span>{metric.suffix}</span>
+                        </div>
+                        <div className="social-modal-metric-label">
+                          {metric.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="social-modal-metric-note">
+                    3 campaigns managed · 6 months growth · multi-platform
+                    optimization
+                  </p>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">
+                    PLATFORM TYPES
+                  </span>
+                  <div className="social-modal-platforms">
+                    {socialPlatformTypes.map((type) => {
+                      const Icon = type.icon;
+                      return (
+                        <div className="social-modal-platform" key={type.title}>
+                          <div className="social-modal-platform-icon">
+                            <Icon size={20} strokeWidth={1.8} />
+                          </div>
+                          <h3>{type.title}</h3>
+                          <p>{type.text}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">WORK PROCESS</span>
+                  <div className="social-modal-process">
+                    {socialProcess.map((step, index) => (
+                      <div
+                        className="social-modal-process-step"
+                        key={step.number}
+                      >
+                        <div className="social-modal-process-head">
+                          <span>{step.number}</span>
+                          {index < socialProcess.length - 1 && <i />}
+                        </div>
+                        <h3>{step.title}</h3>
+                        <p>{step.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="social-modal-cta">
+                  <Link href="/contact" className="social-modal-button">
+                    <span>Start a Project</span>
+                    <ArrowUpRight size={17} strokeWidth={2} />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
