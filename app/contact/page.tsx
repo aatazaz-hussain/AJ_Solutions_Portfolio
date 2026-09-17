@@ -541,7 +541,7 @@ export default function Contact() {
                   >
                     <div className="social-card-top">
                       <div className="social-card-icon">
-                        <Icon size={22} strokeWidth={1.7} />
+                        <Icon size={22} />
                       </div>
                       <ArrowUpRight
                         size={20}
