@@ -10,7 +10,7 @@ export default function IntroCurtain() {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setShowIntro(false);
-      sessionStorage.setItem("aj-solutions-intro", "true");
+      sessionStorage.setItem("aj-technologies-intro", "true");
     }, 3900);
 
     return () => window.clearTimeout(timer);

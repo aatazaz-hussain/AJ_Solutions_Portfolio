@@ -44,7 +44,7 @@ The design system is built around one primary color — the AJ Technology brand 
 
 ```
 
-aj-solutions/
+aj-technologies/
 │
 ├── app/
 │   ├── layout.tsx               Root layout (includes Navbar and Footer)
@@ -87,7 +87,7 @@ aj-solutions/
 │
 ├── public/
 │   ├── logo/
-│   │   └── aj-solutions-logo.png
+│   │   └── aj-technologies-logo.png
 │   └── images/
 │       ├── hero-tech.png
 │       ├── about-hero.png
@@ -158,8 +158,8 @@ Reduced motion is respected across every page via `prefers-reduced-motion`.
 ### Installation
 
 ```bash
-git clone https://github.com/aqsatanoli/aj-solutions.git
-cd aj-solutions
+git clone https://github.com/aqsatanoli/aj-technologies.git
+cd aj-technologies
 npm install
 ```
 
