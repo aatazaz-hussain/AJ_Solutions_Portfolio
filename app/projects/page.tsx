@@ -15,13 +15,13 @@ import {
   TrendingUp,
   Home as HomeIcon,
   BookOpen,
+  LayoutGrid,
 } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import "./projects.css";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-const GITHUB_URL =
-  "https://github.com/aqsatanoli?tab=repositories&type=source";
+const GITHUB_URL = "https://github.com/aqsatanoli?tab=repositories&type=source";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -52,7 +52,8 @@ const filters = [
   { key: "cv", label: "COMPUTER VISION" },
   { key: "data", label: "DATA & ANALYTICS" },
   { key: "software", label: "SOFTWARE" },
-    { key: "social", label: "SOCIAL MEDIA" },
+  { key: "social", label: "SOCIAL MEDIA" },
+  { key: "graphics", label: "GRAPHICS" },
 ];
 
 const projects = [
@@ -128,8 +129,7 @@ const projects = [
       "Digital product development",
     ],
     tech: ["Python", "FastAPI", "AI/ML", "PostgreSQL"],
-    purpose:
-      "Demonstrates integrated software engineering with AI capability.",
+    purpose: "Demonstrates integrated software engineering with AI capability.",
   },
   {
     number: "04",
@@ -253,10 +253,9 @@ const projects = [
       "AI application development",
     ],
     tech: ["Python", "LLMs", "Generative AI", "Prompt Engineering"],
-    purpose:
-      "Demonstrates creative application of large language models.",
+    purpose: "Demonstrates creative application of large language models.",
   },
-    {
+  {
     number: "09",
     slug: "social-media-management",
     image: "/projects/social-media.png",
@@ -281,12 +280,37 @@ const projects = [
     purpose:
       "Extends AJ Solutions' capabilities into brand growth and digital marketing services.",
   },
+    {
+    number: "10",
+    slug: "graphics-design",
+    image: "/projects/graphics-design.png",
+    title: "Graphics Design",
+    category: "CREATIVE DESIGN",
+    tags: ["graphics"],
+    icon: LayoutGrid,
+    shortDescription:
+      "A complete graphics design service covering brand identity, social visuals, marketing collateral and UI/visual design.",
+    problem:
+      "Brands struggle to maintain consistent, professional visuals across print, social and digital product surfaces without a unified design system.",
+    solution:
+      "A full graphics design service from AJ Solutions — logo systems, social templates, marketing collateral and product visuals built on a shared brand language.",
+    features: [
+      "Logo & Brand Identity",
+      "Social Media Graphics",
+      "Marketing Collateral",
+      "UI & Visual Design",
+      "Multi-Format Delivery",
+    ],
+    tech: ["Brand Systems", "Graphic Design", "Print & Digital", "Visual Identity"],
+    purpose:
+      "Extends AJ Solutions' capabilities into creative design and brand systems.",
+  },
 ];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [openProject, setOpenProject] = useState<null | typeof projects[0]>(
-    null
+  const [openProject, setOpenProject] = useState<null | (typeof projects)[0]>(
+    null,
   );
 
   useEffect(() => {
@@ -358,8 +382,8 @@ export default function Projects() {
               </h1>
 
               <motion.p className="projects-hero-text" variants={fadeUp}>
-                Explore a selection of AI, machine learning, generative AI,
-                data analytics and software projects built to solve practical
+                Explore a selection of AI, machine learning, generative AI, data
+                analytics and software projects built to solve practical
                 problems across different domains.
               </motion.p>
 
@@ -434,7 +458,7 @@ export default function Projects() {
               >
                 <Sparkles size={17} />
                 <div>
-                  <span>NINE PROJECTS</span>
+                  <span>TEN PROJECTS</span>
                   <strong>Across domains</strong>
                 </div>
               </motion.div>
@@ -685,8 +709,8 @@ export default function Projects() {
               </h2>
 
               <motion.p variants={fadeUp}>
-                Have a problem that needs AI, software, data or a combination
-                of technologies? Let's explore what we can build together.
+                Have a problem that needs AI, software, data or a combination of
+                technologies? Let's explore what we can build together.
               </motion.p>
 
               <motion.div className="projects-cta-actions" variants={fadeUp}>

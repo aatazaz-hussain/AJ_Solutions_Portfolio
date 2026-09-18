@@ -25,6 +25,11 @@ import {
   BarChart3,
   Calendar,
   X,
+  LayoutGrid,
+  Image as ImageIcon,
+  Printer,
+  Layers,
+  Check,
 } from "lucide-react";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import "./home.css";
@@ -138,7 +143,73 @@ const socialServices = [
     text: "Performance tracking and data-driven optimization across every active social platform.",
   },
 ];
+const graphicsServices = [
+  {
+    number: "01",
+    icon: Palette,
+    title: "Logo & Brand Identity",
+    text: "Complete logo systems, visual identity and brand guidelines built to scale across every platform.",
+  },
+  {
+    number: "02",
+    icon: ImageIcon,
+    title: "Social Media Graphics",
+    text: "Consistent post templates, carousels, story graphics and campaign visuals designed for engagement.",
+  },
+  {
+    number: "03",
+    icon: Printer,
+    title: "Marketing Collateral",
+    text: "Brochures, pitch decks, business cards, banners and print-ready marketing assets.",
+  },
+  {
+    number: "04",
+    icon: LayoutGrid,
+    title: "UI & Visual Design",
+    text: "Web interfaces, app screens, dashboards and digital product visuals built around real usability.",
+  },
+];
 
+const graphicsProof = [
+  {
+    icon: Layers,
+    title: "Brand-Led",
+    text: "Every visual is built around a defined brand system — not improvised per asset.",
+  },
+  {
+    icon: ImageIcon,
+    title: "Multi-Format",
+    text: "Print, digital, social and product surfaces all covered from one design language.",
+  },
+  {
+    icon: Check,
+    title: "Delivery-Ready",
+    text: "Final files organized, exported and structured for handover and future use.",
+  },
+];
+
+const graphicsProcess = [
+  {
+    number: "01",
+    title: "Brief",
+    text: "Understanding the brand, audience and objective before any design work begins.",
+  },
+  {
+    number: "02",
+    title: "Concept",
+    text: "Exploring multiple directions that fit the brief and the brand's positioning.",
+  },
+  {
+    number: "03",
+    title: "Design",
+    text: "Refining the chosen direction into polished, production-ready visuals.",
+  },
+  {
+    number: "04",
+    title: "Deliver",
+    text: "Final files organized for print, digital and future brand use.",
+  },
+];
 const socialMetrics = [
   { value: 120, suffix: "%", label: "Engagement Rate" },
   { value: 80, suffix: "%", label: "Follower Growth" },
@@ -272,7 +343,7 @@ const process = [
 
 export default function Home() {
   const [socialModalOpen, setSocialModalOpen] = useState(false);
-
+  const [graphicsModalOpen, setGraphicsModalOpen] = useState(false);
   return (
     <div className="home-page">
       <main>
@@ -765,7 +836,120 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+                <section className="graphics-section">
+          <div className="graphics-section-grid" />
+          <div className="graphics-section-glow" />
 
+          <div className="section-container">
+            <motion.div
+              className="graphics-heading"
+              variants={staggerParent}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              <motion.div className="section-kicker" variants={fadeUp}>
+                CREATIVE SERVICES
+              </motion.div>
+              <h2>
+                <span className="reveal-mask">
+                  <motion.span
+                    className="reveal-line"
+                    variants={fadeUp}
+                    style={{ display: "block" }}
+                  >
+                    Graphics
+                  </motion.span>
+                </span>
+                <span className="reveal-mask">
+                  <motion.span
+                    className="reveal-line"
+                    variants={fadeUp}
+                    style={{ display: "block" }}
+                  >
+                    <span>Design.</span>
+                  </motion.span>
+                </span>
+              </h2>
+              <motion.p variants={fadeUp}>
+                AJ Solutions designs brand systems, social graphics, marketing
+                collateral and digital interfaces — visual work built around a
+                clear brief and structured for real-world use.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="graphics-grid"
+              variants={staggerParentSlow}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportLow}
+            >
+              {graphicsServices.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <motion.article
+                    className="graphics-card"
+                    key={service.number}
+                    variants={fadeUp}
+                  >
+                    <div className="graphics-card-glow" />
+                    <span className="graphics-card-number">
+                      {service.number}
+                    </span>
+                    <div className="graphics-card-icon">
+                      <Icon size={22} strokeWidth={1.8} />
+                    </div>
+                    <h3>{service.title}</h3>
+                    <p>{service.text}</p>
+                  </motion.article>
+                );
+              })}
+            </motion.div>
+
+            <motion.div
+              className="graphics-proof"
+              variants={staggerParentSlow}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              {graphicsProof.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    className="graphics-proof-card"
+                    key={item.title}
+                    variants={fadeUp}
+                  >
+                    <div className="graphics-proof-icon">
+                      <Icon size={20} strokeWidth={1.8} />
+                    </div>
+                    <h4>{item.title}</h4>
+                    <p>{item.text}</p>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+
+            <motion.div
+              className="graphics-actions"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewport}
+            >
+              <button
+                type="button"
+                className="graphics-cta"
+                onClick={() => setGraphicsModalOpen(true)}
+              >
+                <span>Explore Graphics Services</span>
+                <ArrowUpRight size={17} strokeWidth={2} />
+              </button>
+            </motion.div>
+          </div>
+        </section>
         <section className="technology-section">
           <div className="section-container">
             <div className="technology-layout">
@@ -1262,6 +1446,126 @@ export default function Home() {
                         <div className="social-modal-process-head">
                           <span>{step.number}</span>
                           {index < socialProcess.length - 1 && <i />}
+                        </div>
+                        <h3>{step.title}</h3>
+                        <p>{step.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="social-modal-cta">
+                  <Link href="/contact" className="social-modal-button">
+                    <span>Start a Project</span>
+                    <ArrowUpRight size={17} strokeWidth={2} />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+            <AnimatePresence>
+        {graphicsModalOpen && (
+          <motion.div
+            className="social-modal-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setGraphicsModalOpen(false)}
+          >
+            <motion.div
+              className="social-modal"
+              initial={{ opacity: 0, scale: 0.94, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 10 }}
+              transition={{ duration: 0.4, ease }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="social-modal-close"
+                onClick={() => setGraphicsModalOpen(false)}
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="social-modal-hero">
+                <div className="social-modal-hero-glow" />
+                <span className="social-modal-eyebrow">
+                  AJ SOLUTIONS · CREATIVE SERVICES
+                </span>
+                <h2>Graphics Design</h2>
+                <p>
+                  Brand systems, social graphics, marketing collateral and
+                  digital interfaces — designed with purpose and delivered
+                  ready for real-world use.
+                </p>
+              </div>
+
+              <div className="social-modal-body">
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">WHAT WE DO</span>
+                  <div className="social-modal-services">
+                    {graphicsServices.map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <div className="social-modal-service" key={s.number}>
+                          <div className="social-modal-service-icon">
+                            <Icon size={20} strokeWidth={1.8} />
+                          </div>
+                          <h3>{s.title}</h3>
+                          <p>{s.text}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">OUR APPROACH</span>
+                  <h3 className="social-modal-statement">
+                    Design with purpose. Visuals that work.
+                  </h3>
+                  <p>
+                    Every visual we produce serves a function — to communicate
+                    clearly, fit its format and reflect the brand it belongs
+                    to. We design around the brief, the audience and the final
+                    use case, not just the visual alone.
+                  </p>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">HOW WE DELIVER</span>
+                  <div className="social-modal-platforms">
+                    {graphicsProof.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <div className="social-modal-platform" key={item.title}>
+                          <div className="social-modal-platform-icon">
+                            <Icon size={20} strokeWidth={1.8} />
+                          </div>
+                          <h3>{item.title}</h3>
+                          <p>{item.text}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="social-modal-block">
+                  <span className="social-modal-block-label">WORK PROCESS</span>
+                  <div className="social-modal-process">
+                    {graphicsProcess.map((step, index) => (
+                      <div
+                        className="social-modal-process-step"
+                        key={step.number}
+                      >
+                        <div className="social-modal-process-head">
+                          <span>{step.number}</span>
+                          {index < graphicsProcess.length - 1 && <i />}
                         </div>
                         <h3>{step.title}</h3>
                         <p>{step.text}</p>
