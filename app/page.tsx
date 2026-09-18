@@ -1357,7 +1357,7 @@ export default function Home() {
                 <p>
                   A strategy-driven social media service helping brands grow
                   through content, engagement and analytics. Delivered by AJ
-                  Solutions as part of our end-to-end digital capability.
+                  Technologies as part of our end-to-end digital capability.
                 </p>
               </div>
 

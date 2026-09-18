@@ -545,7 +545,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="contact-cta">
+                <section className="contact-cta">
           <div className="contact-cta-grid" />
           <div className="contact-cta-glow" />
           <div className="contact-cta-orbit" />
@@ -559,7 +559,7 @@ export default function Contact() {
               viewport={viewport}
             >
               <motion.div className="section-kicker" variants={fadeUp}>
-                READY WHEN YOU ARE
+                WHAT HAPPENS NEXT
               </motion.div>
 
               <h2>
@@ -569,7 +569,7 @@ export default function Contact() {
                     variants={fadeUp}
                     style={{ display: "block" }}
                   >
-                    Your next idea
+                    Your message reaches
                   </motion.span>
                 </span>
                 <span className="reveal-mask">
@@ -578,14 +578,16 @@ export default function Contact() {
                     variants={fadeUp}
                     style={{ display: "block" }}
                   >
-                    deserves to <span>move.</span>
+                    us <span>directly.</span>
                   </motion.span>
                 </span>
               </h2>
 
               <motion.p variants={fadeUp}>
-                Tell us what you're building, improving or imagining. Let's
-                turn the next step into something real.
+                No forms routed through sales. No automated replies. Every
+                inquiry lands in our inbox and gets read by the same team
+                that will build your project — typically within one business
+                day.
               </motion.p>
 
               <motion.div className="contact-cta-actions" variants={fadeUp}>
@@ -607,6 +609,7 @@ export default function Contact() {
             </motion.div>
           </div>
         </section>
+          
       </main>
     </div>
   );

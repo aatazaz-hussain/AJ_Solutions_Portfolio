@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Sparkles,
-  Crown,
-  Compass,
-  Cpu,
-} from "lucide-react";
+import { ArrowUpRight, Sparkles, Crown, Compass, Cpu } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import "./team.css";
 
@@ -132,8 +126,8 @@ export default function Team() {
                   <ArrowUpRight size={17} strokeWidth={2} />
                 </Link>
 
-                <Link href="/about" className="hero-secondary">
-                  <span>About AJ Technologies</span>
+                <Link href="/projects" className="hero-secondary">
+                  <span>View Our Work</span>
                   <ArrowUpRight size={17} strokeWidth={2} />
                 </Link>
               </motion.div>
@@ -247,11 +241,11 @@ export default function Team() {
                 </h2>
 
                 <motion.p variants={fadeUp}>
-                  AJ Technologies is led by a focused team of technology leaders.
-                  Each of us brings a distinct strength to the company — from
-                  the vision that shapes what we build, to the strategy that
-                  guides how we operate, to the engineering that makes every
-                  solution real.
+                  AJ Technologies is led by a focused team of technology
+                  leaders. Each of us brings a distinct strength to the company
+                  — from the vision that shapes what we build, to the strategy
+                  that guides how we operate, to the engineering that makes
+                  every solution real.
                 </motion.p>
 
                 <motion.p variants={fadeUp}>
@@ -331,9 +325,7 @@ export default function Team() {
                     <span className="roster-index">{member.number}</span>
 
                     <div className="roster-name-block">
-                      <span className="roster-role-short">
-                        {member.short}
-                      </span>
+                      <span className="roster-role-short">{member.short}</span>
                       <h3 className="roster-name">{member.name}</h3>
                       <span className="roster-role">{member.role}</span>
                     </div>
@@ -351,9 +343,7 @@ export default function Team() {
                       <ArrowUpRight size={20} />
                     </div>
 
-                    <span className="roster-monogram">
-                      {member.monogram}
-                    </span>
+                    <span className="roster-monogram">{member.monogram}</span>
                   </motion.article>
                 );
               })}
@@ -472,8 +462,8 @@ export default function Team() {
               </h2>
 
               <motion.p variants={fadeUp}>
-                Have an idea, a challenge or a project in mind? The AJ
-                Solutions team is ready to help you move it forward.
+                Have an idea, a challenge or a project in mind? The AJ Technologies
+                team is ready to help you move it forward.
               </motion.p>
 
               <motion.div className="team-cta-actions" variants={fadeUp}>
