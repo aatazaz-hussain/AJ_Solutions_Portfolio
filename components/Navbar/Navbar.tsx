@@ -19,13 +19,17 @@ export default function Navbar() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const onContactPage = pathname === "/contact";
+  const ctaHref = onContactPage ? "/projects" : "/contact";
+  const ctaLabel = onContactPage ? "View Our Work" : "Start a Project";
+
   return (
     <header className={`site-header ${menuOpen ? "menu-open" : ""}`}>
       <div className="navbar">
         <Link href="/" className="navbar-logo" onClick={closeMenu}>
           <img
-            src="/logo/aj-solutions-logo.png"
-            alt="AJ Solutions - AI Journey"
+            src="/logo/aj-technologies-logo.png"
+            alt="AJ Technology - AI Journey"
           />
         </Link>
 
@@ -48,8 +52,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        <Link href="/contact" className="nav-cta">
-          <span>Start a Project</span>
+        <Link href={ctaHref} className="nav-cta">
+          <span>{ctaLabel}</span>
           <ArrowUpRight size={17} strokeWidth={2} />
         </Link>
 
@@ -87,8 +91,8 @@ export default function Navbar() {
             );
           })}
 
-          <Link href="/contact" onClick={closeMenu} className="mobile-nav-cta">
-            Start a Project
+          <Link href={ctaHref} onClick={closeMenu} className="mobile-nav-cta">
+            {ctaLabel}
             <ArrowUpRight size={18} strokeWidth={2} />
           </Link>
         </div>

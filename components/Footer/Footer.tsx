@@ -41,8 +41,8 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
               <img
-                src="/logo/aj-solutions-logo.png"
-                alt="AJ Solutions - AI Journey"
+                src="/logo/aj-technologies-logo.png"
+                alt="AJ Technology - AI Journey"
               />
             </Link>
 
@@ -177,7 +177,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 AJ Solutions. All rights reserved.</span>
+          <span>© 2026 AJ Technology. All rights reserved.</span>
           <span className="footer-tagline">AI Journey</span>
         </div>
       </div>

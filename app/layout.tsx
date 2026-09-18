@@ -5,9 +5,9 @@ import Footer from "@/components/Footer/Footer";
 import IntroCurtain from "@/components/IntroCurtain/IntroCurtain";
 
 export const metadata: Metadata = {
-  title: "AJ Solutions | AI Journey",
+  title: "AJ Technology | AI Journey",
   description:
-    "AJ Solutions builds intelligent AI systems, digital products, and scalable technology solutions.",
+    "AJ Technology builds intelligent AI systems, digital products, and scalable technology solutions.",
 };
 
 export default function RootLayout({

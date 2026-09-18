@@ -59,8 +59,8 @@ export default function IntroCurtain() {
         <div className="intro-logo-glow" />
 
         <motion.img
-          src="/logo/aj-solutions-logo.png"
-          alt="AJ Solutions - AI Journey"
+          src="/logo/aj-technologies-logo.png"
+          alt="AJ Technology - AI Journey"
           className="intro-logo"
           initial={{ opacity: 0, scale: 0.8, y: 18 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

@@ -45,7 +45,7 @@ const team = [
     short: "CEO",
     monogram: "A",
     icon: Crown,
-    line: "Leading the vision, direction and the AI journey behind AJ Solutions.",
+    line: "Leading the vision, direction and the AI journey behind AJ Technology.",
   },
   {
     number: "02",
@@ -133,7 +133,7 @@ export default function Team() {
                 </Link>
 
                 <Link href="/about" className="hero-secondary">
-                  <span>About AJ Solutions</span>
+                  <span>About AJ Technology</span>
                   <ArrowUpRight size={17} strokeWidth={2} />
                 </Link>
               </motion.div>
@@ -152,7 +152,7 @@ export default function Team() {
               <div className="hero-image-frame">
                 <Image
                   src="/images/team-hero.png"
-                  alt="Abstract constellation of connected glowing nodes representing the AJ Solutions team"
+                  alt="Abstract constellation of connected glowing nodes representing the AJ Technology team"
                   fill
                   priority
                   sizes="(max-width: 1050px) 100vw, 620px"
@@ -247,7 +247,7 @@ export default function Team() {
                 </h2>
 
                 <motion.p variants={fadeUp}>
-                  AJ Solutions is led by a focused team of technology leaders.
+                  AJ Technology is led by a focused team of technology leaders.
                   Each of us brings a distinct strength to the company — from
                   the vision that shapes what we build, to the strategy that
                   guides how we operate, to the engineering that makes every

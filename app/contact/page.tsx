@@ -226,7 +226,7 @@ export default function Contact() {
               <div className="hero-image-frame">
                 <Image
                   src="/images/contact-hero.png"
-                  alt="Abstract transmission signal representing connection with AJ Solutions"
+                  alt="Abstract transmission signal representing connection with AJ Technology"
                   fill
                   priority
                   sizes="(max-width: 1050px) 100vw, 620px"
@@ -497,7 +497,7 @@ export default function Contact() {
                     variants={fadeUp}
                     style={{ display: "block" }}
                   >
-                    Connect with AJ Solutions
+                    Connect with AJ Technology
                   </motion.span>
                 </span>
                 <span className="reveal-mask">
