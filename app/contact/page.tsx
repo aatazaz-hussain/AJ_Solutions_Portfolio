@@ -86,8 +86,8 @@ const budgets = [
 const contactChannels = [
   {
     label: "EMAIL",
-    value: "ajsolutions45.ai@gmail.com",
-    href: "mailto:ajsolutions45.ai@gmail.com",
+    value: "ajtechnologies.ai@gmail.com",
+    href: "mailto:ajtechnologies.ai@gmail.com",
     icon: Mail,
   },
   {
@@ -204,7 +204,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="mailto:ajsolutions45.ai@gmail.com"
+                  href="mailto:ajtechnologies.ai@gmail.com"
                   className="hero-secondary"
                 >
                   <Mail size={17} />
