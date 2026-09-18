@@ -26,7 +26,11 @@
   padding: 48px 0 34px;
   background:
     radial-gradient(circle at 78% 48%, rgba(8, 124, 255, 0.2), transparent 29%),
-    radial-gradient(circle at 15% 65%, rgba(8, 124, 255, 0.08), transparent 30%),
+    radial-gradient(
+      circle at 15% 65%,
+      rgba(8, 124, 255, 0.08),
+      transparent 30%
+    ),
     #030b18;
 }
 
@@ -618,13 +622,17 @@
 }
 
 .service-card {
-  min-height: 255px;
+  min-height: 275px;
   position: relative;
   overflow: hidden;
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.075);
   border-radius: 13px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
   transition:
     border-color 0.4s ease,
     box-shadow 0.4s ease,
@@ -633,7 +641,11 @@
 
 .service-card:hover {
   border-color: rgba(22, 132, 255, 0.48);
-  background: linear-gradient(145deg, rgba(22, 132, 255, 0.1), rgba(255, 255, 255, 0.018));
+  background: linear-gradient(
+    145deg,
+    rgba(22, 132, 255, 0.1),
+    rgba(255, 255, 255, 0.018)
+  );
   box-shadow: 0 25px 65px rgba(0, 71, 180, 0.13);
 }
 
@@ -1271,7 +1283,11 @@
   padding: 24px 20px;
   border: 1px solid rgba(255, 255, 255, 0.075);
   border-radius: 13px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
   transition:
     border-color 0.4s ease,
     background 0.4s ease,
@@ -1280,7 +1296,11 @@
 
 .social-card:hover {
   border-color: rgba(22, 132, 255, 0.48);
-  background: linear-gradient(145deg, rgba(22, 132, 255, 0.1), rgba(255, 255, 255, 0.018));
+  background: linear-gradient(
+    145deg,
+    rgba(22, 132, 255, 0.1),
+    rgba(255, 255, 255, 0.018)
+  );
   box-shadow: 0 25px 65px rgba(0, 71, 180, 0.13);
 }
 
@@ -1353,7 +1373,11 @@
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.075);
   border-radius: 13px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.012)
+  );
   transition:
     border-color 0.35s ease,
     background 0.35s ease;
@@ -1361,7 +1385,11 @@
 
 .social-metric:hover {
   border-color: rgba(22, 132, 255, 0.4);
-  background: linear-gradient(145deg, rgba(22, 132, 255, 0.09), rgba(255, 255, 255, 0.018));
+  background: linear-gradient(
+    145deg,
+    rgba(22, 132, 255, 0.09),
+    rgba(255, 255, 255, 0.018)
+  );
 }
 
 .social-metric-value {
@@ -1532,7 +1560,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   background:
     radial-gradient(circle at 80% 20%, rgba(8, 124, 255, 0.2), transparent 55%),
-    linear-gradient(135deg, rgba(22, 132, 255, 0.06), rgba(255, 255, 255, 0.008));
+    linear-gradient(
+      135deg,
+      rgba(22, 132, 255, 0.06),
+      rgba(255, 255, 255, 0.008)
+    );
 }
 
 .social-modal-hero-glow {
@@ -2421,7 +2453,8 @@
   }
 
   .service-card {
-    min-height: 235px;
+    min-height: auto;
+    padding: 22px 22px 76px;
   }
 
   .technology-section {
@@ -2649,7 +2682,11 @@
   padding: 24px 20px;
   border: 1px solid rgba(255, 255, 255, 0.075);
   border-radius: 13px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
   transition:
     border-color 0.4s ease,
     background 0.4s ease,
@@ -2658,7 +2695,11 @@
 
 .graphics-card:hover {
   border-color: rgba(22, 132, 255, 0.48);
-  background: linear-gradient(145deg, rgba(22, 132, 255, 0.1), rgba(255, 255, 255, 0.018));
+  background: linear-gradient(
+    145deg,
+    rgba(22, 132, 255, 0.1),
+    rgba(255, 255, 255, 0.018)
+  );
   box-shadow: 0 25px 65px rgba(0, 71, 180, 0.13);
 }
 
