@@ -362,7 +362,7 @@ export default function Home() {
             >
               <motion.div className="hero-eyebrow" variants={slideLeft}>
                 <span className="eyebrow-pulse" />
-                <span>AJ Technology</span>
+                <span>AJ Technologies</span>
                 <span className="eyebrow-divider" />
                 <span>AI JOURNEY</span>
               </motion.div>
@@ -444,7 +444,7 @@ export default function Home() {
               <div className="hero-image-frame">
                 <Image
                   src="/images/hero-tech.png"
-                  alt="AJ Technology AI workspace"
+                  alt="AJ Technologies AI workspace"
                   fill
                   priority
                   sizes="(max-width: 1050px) 100vw, 620px"
@@ -533,7 +533,7 @@ export default function Home() {
                   variants={fadeUp}
                   style={{ display: "block" }}
                 >
-                  AJ Technology
+                  AJ Technologies
                 </motion.div>
 
                 <h2>
@@ -558,14 +558,14 @@ export default function Home() {
                 </h2>
 
                 <motion.p variants={fadeUp}>
-                  AJ Technology brings together strategy, design, engineering
+                  AJ Technologies brings together strategy, design, engineering
                   and artificial intelligence to create technology that has a
                   reason to exist.
                 </motion.p>
 
                 <motion.div variants={fadeUp}>
                   <Link href="/team" className="section-link">
-                    <span>More about AJ Technology</span>
+                    <span>More about AJ Technologies</span>
                     <ArrowUpRight size={17} />
                   </Link>
                 </motion.div>
@@ -747,7 +747,7 @@ export default function Home() {
                 </span>
               </h2>
               <motion.p variants={fadeUp}>
-                Beyond technology, AJ Technology helps brands grow through
+                Beyond technology, AJ Technologies helps brands grow through
                 strategic social media management — content strategy, creation,
                 account management and analytics.
               </motion.p>
@@ -872,7 +872,7 @@ export default function Home() {
                 </span>
               </h2>
               <motion.p variants={fadeUp}>
-                AJ Technology designs brand systems, social graphics, marketing
+                AJ Technologies designs brand systems, social graphics, marketing
                 collateral and digital interfaces — visual work built around a
                 clear brief and structured for real-world use.
               </motion.p>
@@ -1109,7 +1109,7 @@ export default function Home() {
                   variants={fadeUp}
                   style={{ display: "block" }}
                 >
-                  WHY AJ Technology
+                  WHY AJ Technologies
                 </motion.div>
 
                 <h2>
@@ -1351,7 +1351,7 @@ export default function Home() {
               <div className="social-modal-hero">
                 <div className="social-modal-hero-glow" />
                 <span className="social-modal-eyebrow">
-                  AJ Technology · DIGITAL SERVICES
+                  AJ Technologies · DIGITAL SERVICES
                 </span>
                 <h2>Social Media Management</h2>
                 <p>
@@ -1495,7 +1495,7 @@ export default function Home() {
               <div className="social-modal-hero">
                 <div className="social-modal-hero-glow" />
                 <span className="social-modal-eyebrow">
-                  AJ Technology · CREATIVE SERVICES
+                  AJ Technologies · CREATIVE SERVICES
                 </span>
                 <h2>Graphics Design</h2>
                 <p>

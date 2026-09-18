@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link href="/" className="navbar-logo" onClick={closeMenu}>
           <img
             src="/logo/aj-technologies-logo.png"
-            alt="AJ Technology - AI Journey"
+            alt="AJ Technologies - AI Journey"
           />
         </Link>
 

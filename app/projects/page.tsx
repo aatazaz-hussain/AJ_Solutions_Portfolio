@@ -268,7 +268,7 @@ const projects = [
     problem:
       "Brands struggle to build consistent, strategic social presence across multiple platforms without a structured approach.",
     solution:
-      "A complete social media management service — content strategy, creation, account management and analytics — delivered by AJ Technology.",
+      "A complete social media management service — content strategy, creation, account management and analytics — delivered by AJ Technologies.",
     features: [
       "Content Strategy",
       "Content Creation",
@@ -278,7 +278,7 @@ const projects = [
     ],
     tech: ["Strategy", "Content Design", "Analytics", "Community Management"],
     purpose:
-      "Extends AJ Technology' capabilities into brand growth and digital marketing services.",
+      "Extends AJ Technologies' capabilities into brand growth and digital marketing services.",
   },
     {
     number: "10",
@@ -293,7 +293,7 @@ const projects = [
     problem:
       "Brands struggle to maintain consistent, professional visuals across print, social and digital product surfaces without a unified design system.",
     solution:
-      "A full graphics design service from AJ Technology — logo systems, social templates, marketing collateral and product visuals built on a shared brand language.",
+      "A full graphics design service from AJ Technologies — logo systems, social templates, marketing collateral and product visuals built on a shared brand language.",
     features: [
       "Logo & Brand Identity",
       "Social Media Graphics",
@@ -303,7 +303,7 @@ const projects = [
     ],
     tech: ["Brand Systems", "Graphic Design", "Print & Digital", "Visual Identity"],
     purpose:
-      "Extends AJ Technology' capabilities into creative design and brand systems.",
+      "Extends AJ Technologies' capabilities into creative design and brand systems.",
   },
 ];
 
@@ -428,7 +428,7 @@ export default function Projects() {
               <div className="hero-image-frame">
                 <Image
                   src="/images/projects-hero.png"
-                  alt="Abstract dashboard composition representing the AJ Technology project portfolio"
+                  alt="Abstract dashboard composition representing the AJ Technologies project portfolio"
                   fill
                   priority
                   sizes="(max-width: 1050px) 100vw, 620px"

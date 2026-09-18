@@ -1,16 +1,16 @@
-# AJ Technology — AI Journey
+# AJ Technologies — AI Journey
 
-A premium technology website for **AJ Technology**, a company focused on artificial intelligence, machine learning, software engineering, data and digital solutions.
+A premium technology website for **AJ Technologies**, a company focused on artificial intelligence, machine learning, software engineering, data and digital solutions.
 
-The site presents the company's capabilities, portfolio, process and team through a cinematic, brand-driven design system built around the AJ Technology logo blue.
+The site presents the company's capabilities, portfolio, process and team through a cinematic, brand-driven design system built around the AJ Technologies logo blue.
 
 ---
 
 ## Overview
 
-AJ Technology — AI Journey is a modern, fully responsive corporate website built with Next.js 16, React 19, TypeScript and Framer Motion. It combines editorial typography, structured layouts and purposeful motion to communicate innovation, intelligence and progress.
+AJ Technologies — AI Journey is a modern, fully responsive corporate website built with Next.js 16, React 19, TypeScript and Framer Motion. It combines editorial typography, structured layouts and purposeful motion to communicate innovation, intelligence and progress.
 
-The design system is built around one primary color — the AJ Technology brand blue (`#087cff`) — supported by deep navy, white and a controlled accent palette. Every page shares the same visual language: the same typography scale, the same border logic, the same motion behaviors and the same component patterns.
+The design system is built around one primary color — the AJ Technologies brand blue (`#087cff`) — supported by deep navy, white and a controlled accent palette. Every page shares the same visual language: the same typography scale, the same border logic, the same motion behaviors and the same component patterns.
 
 ---
 
@@ -207,7 +207,7 @@ The project follows strict content rules:
 - No fabricated clients, statistics, users, revenue or results
 - Every technology, capability and project listed reflects real work
 - Where detailed information is unavailable, structure is provided without invented data
-- All external links point to real AJ Technology channels
+- All external links point to real AJ Technologies channels
 
 ---
 
@@ -226,14 +226,14 @@ The project follows strict content rules:
 
 ## Author
 
-**AJ Technology — AI Journey**
+**AJ Technologies — AI Journey**
 Founder and Lead: Aqsa Fayyaz
-Company: AJ Technology
+Company: AJ Technologies
 
 ---
 
 ## License
 
-© 2026 AJ Technology. All rights reserved.
+© 2026 AJ Technologies. All rights reserved.
 ```
 
